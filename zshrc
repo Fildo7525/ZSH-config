@@ -94,8 +94,14 @@ alias ll="ls -alt --color=auto"
 export PAGER=most
 export PATH="$PATH:$HOME/Documents/sourcing/Project-Builder"
 export PATH="$PATH:/home/fildo7525/.local/bin"
+
+##################
+#    Aliases     #
+##################
 alias cpp="cd ~/Desktop/Cpp/"
 alias jv="cd ~/Desktop/Java/"
+alias lg="lazygit"
+alias hg="history | grep"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -105,7 +111,9 @@ export SDL2_INCLUDE_DIRS="/usr/include/SDL2"
 export EDITOR="nvim"
 XDG_CURRENT_DESKTOP=KDE
 
-# sourcing ROS2
+##################
+#      ROS2      #
+##################
 source /opt/ros/foxy/setup.zsh
 export ROS_DOMAIN_ID=69
 alias ros="ros2"
