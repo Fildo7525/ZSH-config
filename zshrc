@@ -49,6 +49,44 @@ zstyle ':completion::descriptions' format '[%d]'
 zstyle ':completion:' list-colors ${(s.:.)LS_COLORS}
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 
+# export HISTFILE=~/.zshhistory
+# export HISTFILESIZE=1000000000
+# export HISTSIZE=1000000000
+# setopt INC_APPEND_HISTORY #SHARE_HISTORY
+# setopt EXTENDED_HISTORY
+# setopt HIST_FIND_NO_DUPS
+
+#####################
+# HISTORY           #
+#####################
+export HISTFILE="$HOME/.zshhistory"
+[ -z "$HISTFILE" ] && export HISTFILE="$HOME/.zhistory"
+HISTSIZE=290000
+SAVEHIST=$HISTSIZE
+export HISTTIMEFORMAT="[%F %T] "
+
+#####################
+# SETOPT            #
+#####################
+setopt extended_history       # record timestamp of command in HISTFILE
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_all_dups   # ignore duplicated commands history list
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_verify            # show command with history expansion to user before running it
+setopt inc_append_history     # add commands to HISTFILE in order of execution
+setopt share_history          # share command history data
+setopt always_to_end          # cursor moved to the end in full completion
+setopt hash_list_all          # hash everything before completion
+# setopt completealiases        # complete alisases
+setopt always_to_end          # when completing from the middle of a word, move the cursor to the end of the word
+setopt complete_in_word       # allow completion from within a word/phrase
+setopt nocorrect                # spelling correction for commands
+setopt list_ambiguous         # complete as much of a completion until it gets ambiguous.
+setopt nolisttypes
+setopt listpacked
+setopt automenu
+unsetopt BEEP
+
 alias nv="nvim"
 alias ls="ls --color=auto"
 alias ll="ls -alt --color=auto"
@@ -65,3 +103,9 @@ export PATH="/home/fildo7525/.local/share/zinit/polaris/bin:/home/fildo7525/.car
 export SDL2_INCLUDE_DIRS="/usr/include/SDL2"
 
 export EDITOR="nvim"
+XDG_CURRENT_DESKTOP=KDE
+
+# sourcing ROS2
+source /opt/ros/foxy/setup.zsh
+export ROS_DOMAIN_ID=69
+alias ros="ros2"
