@@ -115,5 +115,6 @@ XDG_CURRENT_DESKTOP=KDE
 #      ROS2      #
 ##################
 source /opt/ros/foxy/setup.zsh
+source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.zsh
 export ROS_DOMAIN_ID=69
 alias ros="ros2"
