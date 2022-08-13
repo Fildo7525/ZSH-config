@@ -5,7 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -98,9 +97,9 @@ export PATH="$PATH:/home/fildo7525/.local/bin"
 ##################
 #    Aliases     #
 ##################
-alias cpp="cd ~/Desktop/Cpp/"
-alias jv="cd ~/Desktop/Java/"
+alias cpp="cd /media/fildo7525/LaCie/Robotika_a_kybernetika/Cpp/"
 alias lg="lazygit"
+alias hi="history"
 alias hg="history | grep"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -114,7 +113,7 @@ XDG_CURRENT_DESKTOP=KDE
 ##################
 #      ROS2      #
 ##################
-source /opt/ros/foxy/setup.zsh
+source /opt/ros/humble/setup.zsh
 source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.zsh
-export ROS_DOMAIN_ID=69
 alias ros="ros2"
+
