@@ -110,6 +110,12 @@ export SDL2_INCLUDE_DIRS="/usr/include/SDL2"
 export EDITOR="nvim"
 XDG_CURRENT_DESKTOP=KDE
 
+##########################
+#     MC zsh support     #
+##########################
+# mc's subshell relies on ZDOTDIR to be initialized. Otherwise the subshell doesn't work.
+export ZDOTDIR="~/.zshrc"
+
 ##################
 #      ROS2      #
 ##################
