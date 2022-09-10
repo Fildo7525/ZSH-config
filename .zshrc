@@ -97,7 +97,7 @@ export PATH="$PATH:/home/fildo7525/.local/bin"
 ##################
 #    Aliases     #
 ##################
-alias cpp="cd /media/fildo7525/LaCie/Robotika_a_kybernetika/Cpp/"
+alias cpp="cd ~/Desktop/Cpp/"
 alias lg="lazygit"
 alias hi="history"
 alias hg="history | grep"
@@ -116,4 +116,7 @@ XDG_CURRENT_DESKTOP=KDE
 source /opt/ros/humble/setup.zsh
 source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.zsh
 alias ros="ros2"
+
+export PATH=$PATH:/usr/local/go/bin
+# echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode
 
