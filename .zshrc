@@ -114,7 +114,7 @@ XDG_CURRENT_DESKTOP=KDE
 #     MC zsh support     #
 ##########################
 # mc's subshell relies on ZDOTDIR to be initialized. Otherwise the subshell doesn't work.
-export ZDOTDIR="~/.zshrc"
+# export ZDOTDIR="~/.zshrc"
 
 ##################
 #      ROS2      #
@@ -126,3 +126,7 @@ alias ros="ros2"
 export PATH=$PATH:/usr/local/go/bin
 # echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode
 
+# Load bash completion functions
+autoload -Uz +X compinit && compinit
+autoload -Uz +X bashcompinit && bashcompinit
+# export PATH=/opt/ros/humble/bin:/home/fildo7525/.local/share/zinit/polaris/bin:/home/fildo7525/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fildo7525/Documents/sourcing/Project-Builder:/home/fildo7525/Documents/sourcing/lazygit:/home/fildo7525/.local/bin:/home/fildo7525/Documents/sourcing/Project-Builder:/home/fildo7525/.local/bin:/usr/include/SDL2:/usr/local/go/bin:/home/fildo7525/Documents/sourcing/Project-Builder/startup/build
